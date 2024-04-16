@@ -8,12 +8,7 @@ import (
 )
 
 // Task representa una tarea en la lista de tareas.
-type Task struct {
-	ID     string `json:"id"`
-	Name   string `json:"name"`
-	Status string `json:"status"`
-}
-
+ 
 // TaskManager maneja la gestión de tareas.
 type TaskManager struct {
 	tasks      []*Task
