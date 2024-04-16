@@ -26,6 +26,12 @@ func main() {
 			stringsArray[i] = generateRandomString()
 		}
 		fmt.Println("Strings Array:", stringsArray)
+		fmt.Println("Strings Array:")
+		fmt.Println("<ul>")
+		for _, str := range stringsArray {
+			fmt.Println("<li>", str, "</li>")
+		}
+		fmt.Println("</ul>")
 
 	} else {
 
@@ -34,6 +40,12 @@ func main() {
 			array[i] = rand.Intn(100)
 		}
 		fmt.Println("Array:", array)
+		fmt.Println("Array:")
+		fmt.Println("<ul>")
+		for _, num := range array {
+			fmt.Println("<li>", num, "</li>")
+		}
+		fmt.Println("</ul>")
 
 	}
 
