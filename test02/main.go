@@ -27,9 +27,9 @@ func main() {
 		}
 		fmt.Println("Strings Array:", stringsArray)
 		fmt.Println("Strings Array:")
-		fmt.Println("<ul>")
+		fmt.Println(`<ul style="list-style-type: none; padding: 0;">`)
 		for _, str := range stringsArray {
-			fmt.Println("<li>", str, "</li>")
+			fmt.Println(`<li style="border: 1px solid #ddd; margin-top: -1px; background-color: #f5f5f5; padding: 12px;">`, str, "</li>")
 		}
 		fmt.Println("</ul>")
 
