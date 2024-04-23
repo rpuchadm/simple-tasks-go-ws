@@ -35,6 +35,10 @@ func main() {
 	}
 
 	// Imprimir todas las tareas
+	List(tasks)
+}
+
+func List(tasks []*Task) {
 	for _, task := range tasks {
 		fmt.Printf("ID: %s, ", task.ID)
 		fmt.Printf("Name: %s, ", task.Name)
