@@ -27,20 +27,7 @@ func main() {
 
 	config := openai.DefaultAzureConfig(AZURE_OPENAI_API_KEY, AZURE_OPENAI_BASE_URL)
 	client := openai.NewClientWithConfig(config)
-	/*
-		resp, err := client.CreateChatCompletion(
-			context.Background(),
-			openai.ChatCompletionRequest{
-				Model: openai.GPT3Dot5TurboInstruct,
-				Messages: []openai.ChatCompletionMessage{
-					{
-						Role:    openai.ChatMessageRoleUser,
-						Content: "Hello!",
-					},
-				},
-			},
-		)
-	*/
+
 	resp, err := client.CreateCompletion(
 		context.Background(),
 		openai.CompletionRequest{
@@ -56,7 +43,4 @@ func main() {
 
 	fmt.Println(resp.Choices[0].Text)
 
-	/*
-		fmt.Println(resp.Choices[0].Message.Content)
-	*/
 }
